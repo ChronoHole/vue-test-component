@@ -1,26 +1,18 @@
+<!--Компонент имеет две точки распространения контента, одна для иконки, вторая для заголовка-->
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+	<TestComponent>
+		<template v-slot:icon><SVGComponent /></template>
+		<template v-slot:title>Title Big Mob</template>
+	</TestComponent>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+import SVGComponent from './components/SVGComponent.vue'
+import TestComponent from './components/TestComponent.vue'
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+	font-family: 'Manrope', sans-serif;
 }
 </style>
